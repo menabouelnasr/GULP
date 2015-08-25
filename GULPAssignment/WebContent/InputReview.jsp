@@ -19,29 +19,27 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
 </head>
 <body>
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
+<nav class="navbar navbar-inverse">
+    <div>
+      <ul class="nav navbar-nav">
+      	<li><a><b>Restaurant Review and Information:</a></li></b><br><br>
+      </ul>
+    </div>
+</nav>
+      
 ${message}
-</form>
 </div>
 <br>
 <br>
 <br>
 
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
 ${message2}
-</form>
-</div>
+
 <br>
 <br>
 <br>
 
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
 ${message3}
-</form>
-</div>
 <br>
 <br>
 <br>

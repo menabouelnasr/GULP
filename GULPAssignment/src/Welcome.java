@@ -76,7 +76,7 @@ public class Welcome extends HttpServlet {
 	            {
 	            	System.out.println("in else");
 	            	 output+="<p></p><table border=1 color=white bgcolor=white>";
-	                 output+="<tr><th>Restaurants Found:</th></tr> ";
+	                 output+="<tr><th>Restaurant Names</th></tr> ";
 	                 while(rs.next())
 	                 {
 	              	   companyName=rs.getString("name");

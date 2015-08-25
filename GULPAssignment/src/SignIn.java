@@ -71,7 +71,7 @@ public class SignIn extends HttpServlet {
 			    
 		         if(rs2.next()==false)
 		         {
-		        	 output= "Please try again, you have entered an invalid email and/or password";
+		        	 output= "Please try again, you have entered an invalid email and/or zip";
 		        	 request.setAttribute("message", output);
 				     getServletContext().getRequestDispatcher("/ReviewsOutput.jsp").forward(request,response);
 				     output="";
@@ -100,7 +100,6 @@ public class SignIn extends HttpServlet {
 		    			e.printStackTrace();
 		    		}	
 		            stmt = conn.createStatement();
-		            System.out.println("select * from Reviews where UserID= '" + ID + "'");
 		            ResultSet rs = stmt.executeQuery("select * from Reviews where UserID= '" + ID + "'");
 		            output+="<table border=2 color=white>";
 		            output+="<tr><th>Rating Date </th><th>Rating</th><th>Review</th></tr> "; 
@@ -114,7 +113,7 @@ public class SignIn extends HttpServlet {
 		         		output+= "<tr><td>" + RatingDate + "</td><td>"+ Rating+ "</td><td>"+ Review+ "</td></tr>"; 
 		            }
 		         }
-				}
+			}
   
 				catch (Exception e) 
 		      {

@@ -20,9 +20,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div class ="panel panel-primary col-md-2 col-sm-offset-4">
-
+<nav class="navbar navbar-inverse">
+    <div>
+      <ul class="nav navbar-nav">
+      	<li><a><b>Restaurants Found:</a></li></b><br><br>
+      </ul>
+      </div>
+      </nav>
+     
 ${message}
-</div>
+
 </body>
 </html>

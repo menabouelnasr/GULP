@@ -23,27 +23,25 @@
 <nav class="navbar navbar-inverse">
     <div>
       <ul class="nav navbar-nav">
-      	<li><a><b>Welcome! Here is your user Profile!</a></li></b><br><br>
+      	<li><a><b>Edit User Information</a></li></b><br><br>
       </ul>
-      </div>
+    </div>
 </nav>
-      
-      
-<form>${message}</form>
-</body>
-<body>
-
-<form class= "text-center" action="WelcomeOutput.jsp"  method="post">
-<div class= "col-sm-2 col-sm-offset-2">
-<button type="submit" value = "submit" class= "button btn-primary form-control">Search Restaurants</button>
-</div>
-</form>
+Please enter the information that you would like altered. <br>
+Leave field(s) blank to keep your old information.
 <br>
 <br>
-<form class= "text-center" action="userEdits.jsp"  method="post">
-<div class= "col-sm-2 col-sm-offset-2">
-<button type="submit" value = "submit" class= "button btn-primary form-control">Edit User Information</button>
-</div>
+<div class ="class=col-sm-2 col-sm-2 col-sm-offset-0">
+<form class= "text-center" action="WelcomeOutputs"  method="post">
+<br>
+Email:<br>
+<input type="text" placeholder= "ex. join@domain.com" name="email" required> </input><br>
+<br>
+Review Number:<br>
+<input type="number" placeholder="ex. 1" name="review"> </input><br>
+<br>
+<button type="submit" value = "submit" class= "button btn-primary form-control">Update</button>
 </form>
+</div>
 </body>
 </html>
