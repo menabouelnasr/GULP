@@ -85,12 +85,13 @@ public class Review extends HttpServlet
 	       		output+= "<tr><td>" + ID + "</td><td>"+ Name + "</td><td>"+ Address+ "</td><td>"+ Description+ "</td><td></table>"; 
 	     
            
-	       conn.close();
+	      //conn.close();
 		}
 		catch (Exception e) 
         {
     	   e.getMessage();
         }
+		
 		try
 		{
 	       String url = "jdbc:oracle:thin:testuser/password@localhost"; 
@@ -117,13 +118,17 @@ public class Review extends HttpServlet
            output2+="<table border=2 color=white>";
            output2+="<tr><th>Rating Date </th><th>Rating</th><th>Review</th></tr> "; 
            
+           //System.out.println(rs2.next());
            	while(rs2.next())
            	{
            		RatingDate= rs2.getString("ratingDate");
+           		System.out.println(RatingDate);
            		Rating= rs2.getString("Rating");
+           		System.out.println(Rating);
            		Review= rs2.getString("reviews");
+           		System.out.println(Review);
            		
-           		calc+= Double.parseDouble(Review);
+           		calc+= Double.parseDouble(Rating);
            		count++;
            		System.out.println(RatingDate + " "+ Rating+ " "+ Review);
            		output2+= "<tr><td>" + RatingDate + "</td><td>"+ Rating+ "</td><td>"+ Review+ "</td></tr>"; 
@@ -142,9 +147,7 @@ public class Review extends HttpServlet
             output3+= "<tr><td>" + ave + "</td><td>"+ count+"</td></tr>";
            	System.out.println(ave);
            	System.out.println(count); 
-      		conn.close();
-	       	
-	       		
+ 		
 		}
 		catch (Exception e) 
         {
@@ -157,7 +160,7 @@ public class Review extends HttpServlet
         getServletContext().getRequestDispatcher("/InputReview.jsp").forward(request,response);
         output="";
         output2="";
-        
+        output3="";
 	}
 
 	/**
