@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import java.sql.Connection;
 /**
@@ -39,7 +40,7 @@ public class Welcome extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		// TODO Auto-generated method stub
-		String name, companyName, coID;
+		String name, companyName, coID= "";
 		name=request.getParameter("query");
 		System.out.println(name);
 		
@@ -65,7 +66,7 @@ public class Welcome extends HttpServlet {
 	    		}
 	          
 	            Statement stmt = conn.createStatement();
-	            System.out.println("select * from Restaurants where name Like '%" + name +"%'");
+	            //System.out.println("select * from Restaurants where name Like '%" + name +"%'");
 	            ResultSet rs = stmt.executeQuery("select * from Restaurants where name Like '%" + name +"%'");
 	            if(rs==null)
 	            {
@@ -80,9 +81,10 @@ public class Welcome extends HttpServlet {
 	                 {
 	              	   companyName=rs.getString("name");
 	              	   coID=rs.getString("ID");
-	              	   System.out.println("");
 	              	   output+= "<tr><td><a href= Review?name="+ coID + ">"+ companyName +"</a></td></tr>";
 	                 }
+	                HttpSession session = request.getSession();
+	 	        	session.setAttribute("restaurantID", coID);
 	            }
 	            conn.close();
 	        }

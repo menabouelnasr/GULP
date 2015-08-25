@@ -19,45 +19,16 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
 </head>
 <body>
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message}
-</form>
-</div>
-<br>
-<br>
-<br>
 
 <div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message2}
-</form>
-</div>
+<form class= "text-center" action="SignIn"  method="post">
+Email:<br>
+<input type="text" placeholder= "ex. join@domain.com" name="email" required> </input><br>
 <br>
+Password:<br>
+<input type="password" placeholder="password" name="password" required> </input><br>
 <br>
-<br>
-
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message3}
-</form>
-</div>
-<br>
-<br>
-<br>
-
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center" action="ToDatabase"  method="post">
-Date:<br>
-<input type="number" placeholder= "ex 08/12/1999" name="date"> </input><br>
-<br>
-Average Rating:<br>
-<input type="number" placeholder= "0-5" name="rating"> </input><br>
-<br>
-Review:<br>
-<input type="text" name="review"></input><br>
-<br>
-<button type="submit" value = "submit" class= "button btn-primary form-control">Submit</button>
+<button type="submit" value = "submit" class= "button btn-primary form-control">Sign In</button>
 </form>
 </div>
 </body>

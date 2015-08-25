@@ -17,48 +17,17 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
+<title>Insert title here</title>
 </head>
 <body>
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message}
-</form>
-</div>
-<br>
-<br>
-<br>
+<form>${message}</form>
+</body>
+<body>
 
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message2}
-</form>
+<form class= "text-center" action="WelcomeOutput.jsp"  method="post">
+<div class= "col-sm-6 col-sm-offset-2">
+<button type="submit" value = "submit" class= "button btn-primary form-control">Search Restaurants</button>
 </div>
-<br>
-<br>
-<br>
-
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message3}
 </form>
-</div>
-<br>
-<br>
-<br>
-
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center" action="ToDatabase"  method="post">
-Date:<br>
-<input type="number" placeholder= "ex 08/12/1999" name="date"> </input><br>
-<br>
-Average Rating:<br>
-<input type="number" placeholder= "0-5" name="rating"> </input><br>
-<br>
-Review:<br>
-<input type="text" name="review"></input><br>
-<br>
-<button type="submit" value = "submit" class= "button btn-primary form-control">Submit</button>
-</form>
-</div>
 </body>
 </html>

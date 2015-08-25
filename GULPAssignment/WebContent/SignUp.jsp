@@ -17,47 +17,25 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
+<title>Insert title here</title>
 </head>
 <body>
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message}
-</form>
-</div>
-<br>
-<br>
-<br>
 
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message2}
-</form>
-</div>
+<div class ="col-sm-6 col-sm-2 col-sm-offset-0">
+<form class= "text-center" action="SignUp"  method="post">
+First Name:<br>
+<input type="text" placeholder= "ex. John" name="fName"> </input><br>
 <br>
+Last Name:<br>
+<input type="text" placeholder= "ex. Doe" name="lName"> </input><br>
 <br>
+Email:<br>
+<input type="text" placeholder= "ex. email@domain.com" name="email"></input><br>
 <br>
-
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center">
-${message3}
-</form>
-</div>
+Zip Code:<br>
+<input type="number" placeholder= "ex. 55555" name="zip"></input><br>
 <br>
-<br>
-<br>
-
-<div class ="class=col-sm-8 col-sm-6 col-sm-offset-0">
-<form class= "text-center" action="ToDatabase"  method="post">
-Date:<br>
-<input type="number" placeholder= "ex 08/12/1999" name="date"> </input><br>
-<br>
-Average Rating:<br>
-<input type="number" placeholder= "0-5" name="rating"> </input><br>
-<br>
-Review:<br>
-<input type="text" name="review"></input><br>
-<br>
-<button type="submit" value = "submit" class= "button btn-primary form-control">Submit</button>
+<button type="submit" value = "submit" class= "button btn-primary form-control">Create Account</button>
 </form>
 </div>
 </body>
