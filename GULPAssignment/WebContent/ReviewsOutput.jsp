@@ -20,14 +20,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-Inverse">
   <div class="container-fluid">
     <div class="navbar-header">
   </span>
     </div>
     <div>
       <ul class="nav navbar-nav">
-      	<li><a >GULP!</a></li>
+      	<li><a >GULP Reviews!</a></li>
       </ul>
     </div>
   </div>

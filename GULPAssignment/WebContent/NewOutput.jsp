@@ -20,6 +20,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class ="panel panel-primary col-md-2 col-sm-offset-4">
+
 ${message}
+</div>
 </body>
 </html>

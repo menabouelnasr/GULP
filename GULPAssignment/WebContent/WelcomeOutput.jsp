@@ -18,21 +18,16 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
 <title>Find People</title>
+<style>h1{background: black; text:white}</style>
 </head>
 <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-  </span>
-    </div>
+<nav class="navbar navbar-inverse">
     <div>
       <ul class="nav navbar-nav">
-      	<li><a >GULP!</a></li>
+      	<li><a><b>Welcome to GULP!</a></li></b><br><br>
+      	<li><a><em>Search and review the world best restaurants and bars!</a></li></em>
       </ul>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-sm-2 col-sm-offset-10">
+  <div class="col-sm-2 col-sm-offset-10">
             <div class="account-wall">
                 <form action= "SignInJSP.jsp" class="form-signin">
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
@@ -40,7 +35,6 @@
             </div>
             <a href="SignUp.jsp" class="text-center">Create an account </a>
         </div>
-
   </nav>
 	<div class ="panel panel-primary col-sm-4 col-sm-offset-4">
 		<div class ="panel-heading"> <span class="glyphicon glyphicon-search"></span> Restaurant Search</div>
@@ -55,7 +49,6 @@
 				</div>
 			</form>
 		</div>
-		
 	
 	</div>
 </body>
