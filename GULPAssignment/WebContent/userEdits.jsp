@@ -32,13 +32,16 @@ Leave field(s) blank to keep your old information.
 <br>
 <br>
 <div class ="class=col-sm-2 col-sm-2 col-sm-offset-0">
-<form class= "text-center" action="WelcomeOutputs"  method="post">
+<form class= "text-center" action="UserEditing"  method="post">
 <br>
-Email:<br>
-<input type="text" placeholder= "ex. join@domain.com" name="email" required> </input><br>
+Edit Email:<br>
+<input type="text" name="EditEmail"> </input><br>
 <br>
-Review Number:<br>
-<input type="number" placeholder="ex. 1" name="review"> </input><br>
+Edit Review<br>
+<br>
+Restaurant Name: <input type="text" name="Rname"> </input><br>
+<br>
+Review: <input type="text" name="review"> </input><br>
 <br>
 <button type="submit" value = "submit" class= "button btn-primary form-control">Update</button>
 </form>

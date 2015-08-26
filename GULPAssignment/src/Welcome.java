@@ -70,7 +70,7 @@ public class Welcome extends HttpServlet {
 	            ResultSet rs = stmt.executeQuery("select * from Restaurants where name Like '%" + name +"%'");
 	            if(rs==null)
 	            {
-	            	System.out.println("here");//display selected restaurant is unavailable, please create the new restaurant in new jsp.
+	            	System.out.println("here");
 	            }
 	            else
 	            {

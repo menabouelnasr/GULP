@@ -20,17 +20,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<nav class="navbar navbar-Inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-  </span>
-    </div>
+<nav class="navbar navbar-inverse">
     <div>
       <ul class="nav navbar-nav">
-      	<li><a >GULP Reviews!</a></li>
+      	<li><a><b>Restaurant Reviews</a></li></b><br><br>
       </ul>
     </div>
-  </div>
+</nav>
 
   
   <div class="col-sm-6 col-sm-2 col-sm-offset-10">

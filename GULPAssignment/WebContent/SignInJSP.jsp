@@ -18,24 +18,26 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
 </head>
-<body>
+<body style="background-color:#FFCCFF">
 <nav class="navbar navbar-inverse">
-    <div>
+    <div class="col-sm-6 col-sm-offset-5">
       <ul class="nav navbar-nav">
       	<li><a><b>Sign In Below</a></li></b><br><br>
       </ul>
-      </div>
-      </nav>
-<div class ="class=col-sm-2 col-sm-2 col-sm-offset-0">
-<form class= "text-center" action="SignIn"  method="post">
-Email:<br>
-<input type="text" placeholder= "ex. join@domain.com" name="email" required> </input><br>
-<br>
-Zip Code:<br>
-<input type="password" placeholder="ex. 12345" name="password" required> </input><br>
-<br>
-<button type="submit" value = "submit" class= "button btn-primary form-control">Sign In</button>
-</form>
+    </div>
+</nav>
+<br><br><br>
+<div class ="col-sm-4 col-sm-offset-4">
+	<p> ${invalid_user}<p>
+	<form class= "text-center" action="SignIn"  method="post">
+		Email:<br>
+		<input type="text" class="form-control" placeholder= "ex. join@domain.com" name="email" required> </input><br>
+		<br>
+		Zip Code:<br>
+		<input type="password" class="form-control" placeholder="ex. 12345" name="password" required> </input><br>
+		<br>
+		<button type="submit"  value = "submit" class= "button btn-primary form-control">Sign In</button>
+	</form>
 </div>
 </body>
 </html>

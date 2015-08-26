@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class ToDatabase
  */
@@ -37,7 +37,7 @@ public class ToDatabase extends HttpServlet
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-    private void addToDatabase (String ID, String date,  String rating, String review, String UserID ) 
+    private void addToDatabase (String ID, String date,  String rating, String review, String UserID, String RestaurantName) 
     {
      	//URL of Oracle database server
      	 
@@ -60,8 +60,8 @@ public class ToDatabase extends HttpServlet
 			Statement stmt = conn.createStatement();
 		 
 			String insertQuery = "insert into Reviews";
-			//System.out.println(" insert into Reviews values ( '" + ID + "', '"+ rating + "', '" + date + "','"+ review + "')");
-			insertQuery += " values ( '" + ID + "', '"+ date + "', '" + rating + "','"+ review + "','"+ UserID + "')"; 
+			System.out.println(" insert into Reviews values ( '" + ID + "', '"+  date + "', '" + rating + "','"+ review + "','"+ RestaurantName + "','"+ UserID + "')");
+			insertQuery += " values ( '" + ID +"', '"+ RestaurantName + "','"+  date + "', '" + rating + "','"+ review + "','"+ UserID + "')"; 
 			stmt.execute ( insertQuery );   
 			
 			System.out.println(insertQuery);
@@ -75,7 +75,7 @@ public class ToDatabase extends HttpServlet
 }
     protected void processRequest( HttpServletRequest request, HttpServletResponse response )throws ServletException, IOException 
 	{
-		String ID, rating, inputDate, review, UserID;
+		String ID, rating, inputDate, review, UserID, RestaurantName="";
 	
 		HttpSession session= request.getSession(true);
 		ID= session.getAttribute("restaurantID").toString();
@@ -86,11 +86,35 @@ public class ToDatabase extends HttpServlet
 		System.out.println(review);
 		inputDate=request.getParameter("date");
 		System.out.println(inputDate);
-		
+	
 		HttpSession session2= request.getSession(true);
 		UserID= session2.getAttribute("UserID").toString();
-	
-		addToDatabase (ID, rating, inputDate, review, UserID);
+		
+		String url = "jdbc:oracle:thin:testuser/password@localhost"; 
+		 try 
+		 {
+			 Class.forName("oracle.jdbc.driver.OracleDriver");
+				
+	            //properties for creating connection to Oracle database
+	            Properties props = new Properties();
+	            props.setProperty("user", "testdb");
+	            props.setProperty("password", "password");
+	         conn = DriverManager.getConnection(url,props);
+	    	
+   
+	            Statement stmt = conn.createStatement();
+	            ResultSet rs2 = stmt.executeQuery("select * from Restaurants where ID=" + ID);
+
+	            rs2.next();
+      		RestaurantName= rs2.getString("Name");
+      	
+ 		conn.close();  		
+		}
+		catch (Exception e) 
+		{
+	   e.getMessage();
+		}
+		addToDatabase (ID, rating, inputDate, review, UserID, RestaurantName);
 	}
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
