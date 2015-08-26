@@ -23,36 +23,24 @@
 <nav class="navbar navbar-inverse">
     <div>
       <ul class="nav navbar-nav">
-      	<li><a><b>Welcome ${user} !</a></li></b><br><br>
+      	<li><a><b>Edit Restaurant Information</a></li></b><br><br>
       </ul>
-      </div>
-      <button class= "col-sm-2 col-sm-offset-8" type="submit" value = "submit" class= "button btn-primary form-control">Sign out</button>
+    </div>
 </nav>
-      
-      
-<form class="navbar-form">${message}</form>
-</body>
-<body>
-
-
-<form class= "text-center" action="WelcomeOutput.jsp"  method="post">
-<div class= "col-sm-4 col-sm-offset-2">
-<button type="submit" value = "submit" class= "button btn-primary form-control">Search Restaurants</button>
-</div>
+Please enter the information that you would like altered. <br>
+Leave field(s) blank to keep your old information.
+<br>
+<br>
+<div class ="class=col-sm-2 col-sm-2 col-sm-offset-0">
+<form class= "text-center" action="RestaurantEditing"  method="post">
+<br>
+Edit Restaurant Name:<br>
+<input type="text" name="Name"> </input><br>
+<br>
+Edit Restaurant Address: <input type="text" name="Address"> </input><br>
+<br>
+<button type="submit" value = "submit" class= "button btn-primary form-control">Update</button>
 </form>
-<br>
-<br>
-<form class= "text-center" action="userEdits.jsp"  method="post">
-<div class= "col-sm-4 col-sm-offset-2">
-<button type="submit" value = "submit" class= "button btn-primary form-control">Edit User Information</button>
 </div>
-</form>
-<br>
-<br>
-<form class= "text-center" action="RestaurantEdits.jsp"  method="post">
-<div class= "col-sm-4 col-sm-offset-2">
-<button type="submit" value = "submit" class= "button btn-primary form-control">Edit Restaurant Information</button>
-</div>
-</form>
 </body>
 </html>
